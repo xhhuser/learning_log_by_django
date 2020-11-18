@@ -1,0 +1,17 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+  {% if form.errors %}
+  <p>你的用户名与密码不匹配，请重新输入。</p>
+  {% endif %}
+    
+  <form method="post" action="{% url 'users:login' %}">
+  {% csrf_token %}
+  {{ form.as_p }}                 <!--显示这个表单-->
+    
+  <button name="submit">登录</button>           <!--添加一个提交登录按钮-->
+  <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />     <!--这里隐藏的next被用于存储将要跳转的页面的文字-->
+  </form>
+    
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+  <p>创建新的主题:</p>
+
+  <form action="{% url 'learning_logs:new_topic' %}" method='post'>
+      <!--form表单，action告诉其提交数据发回视图函数new_topic(),method指定方法-->
+    {% csrf_token %}           <!--防止对表单位置授权的访问-->
+    {{ form.as_p }}            <!--模板变量，自动创建表单需要的字段，并用as_p格式渲染-->
+    <button name="submit">添加</button>      <!--提交按钮,包含在form中-->
+  </form>
+    
+{% endblock content %}

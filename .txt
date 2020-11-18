@@ -1,0 +1,38 @@
+激活虚拟环境：ll_env\Scripts\activate
+核实项目运行异常状态：python manage.py runserver
+
+公网ip：118.31.39.91
+
+MD5:a4:a0:7c:09:8c:3b:37:06:36:3c:61:c8:b5:e9:dc:80
+SHA256:FsdSfRAXZ2yLUU4fUGRBPWIlR7LMsfCZZZoz1K5bI48
++---[RSA 2048]----+        +---[RSA 2048]----+
+|oo..             |        |          .ooO%^=|
+|++o o            |        |         o  B=^=*|
+|oEo+.   .        |        |        o o .#=o+|
+|.+=ooo o         |        |         +   .oo |
+|o *oo.. S        |        |        S     .  |
+| + o             |        |       .     o o |
+|                 |        |              * .|
+|                 |        |             E . |
+|                 |        |                 |
++------[MD5]------+        +----[SHA256]-----+
+
+
+git通信密码：
+The key fingerprint is:
+SHA256:UyLu2MPCNalCWEnoFbXTmCsw1vEF10X4B1606Y7F84k xhh88245056@126.com
+The key's randomart image is:
++---[RSA 3072]----+
+| ..ooo.o. +o..   |
+|...oo B  o . .o  |
+|.++. *... + oo   |
+|.+o  .oo o oo.   |
+|. .. .= S   .=   |
+| . ..B . .  + + .|
+|  . = =    . E o |
+|   . . .         |
+|                 |
++----[SHA256]-----+
+
+
+

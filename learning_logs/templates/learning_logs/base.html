@@ -1,0 +1,64 @@
+{% load bootstrap3 %}   <!--加载bootstrap的模板标签集-->
+
+<!DOCTYPE html>
+<html lang="en">     <!--声明文件为使用语言是英文的HTML文档-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>学习笔记</title>
+
+    {% bootstrap_css %}         <!--使文件包含所有的Boostrap样式文件-->
+    {% bootstrap_javascript %}
+
+  </head>
+
+  <body>
+
+    <!-- 静态导航栏 -->
+    <nav class="navbar navbar-default navbar-static-top">        <!--样式选择器-->
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+              data-toggle="collapse" data-target="#navbar"
+              aria-expanded="false" aria-controls="navbar">
+          </button>     <!--此按钮在导航栏太窄时会折叠显示，并供用户点击-->
+          <a class="navbar-brand" href="{% url 'learning_logs:index' %}">      <!--在导航栏最左边显示项目名，设置为到主页的链接-->
+              学习笔记</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'learning_logs:topics' %}">主题</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+              <li><a>你好, {{ user.username }}.</a></li>
+              <li><a href="{% url 'users:logout' %}">退出登录</a></li>
+            {% else %}
+              <li><a href="{% url 'users:register' %}">注册</a></li>
+              <li><a href="{% url 'users:login' %}">去登录</a></li>
+            {% endif %}
+          </ul>
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </nav>
+
+
+    <div class="container">
+
+      <div class="page-header">
+        {% block header %}{% endblock %}
+      </div>
+      <div>
+        {% block content %}{% endblock %}
+      </div>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
