@@ -28,7 +28,7 @@ DEBUG = False  # 关闭调试模式
 ALLOWED_HOSTS = ['118.31.39.91']  # 允许的服务器，可以是域名或IP
 
 # 静态文件收集目录
-STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+STATIC_ROOT = BASE_DIR.joinpath('collected_static')
 
 # 应用程序定义
 
