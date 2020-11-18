@@ -2,7 +2,7 @@
 核实项目运行异常状态：python manage.py runserver
 
 公网ip：118.31.39.91
-
+远程连接密码： G0l0Sj
 MD5:a4:a0:7c:09:8c:3b:37:06:36:3c:61:c8:b5:e9:dc:80
 SHA256:FsdSfRAXZ2yLUU4fUGRBPWIlR7LMsfCZZZoz1K5bI48
 +---[RSA 2048]----+        +---[RSA 2048]----+
